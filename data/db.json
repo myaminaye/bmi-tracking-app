@@ -1,0 +1,20 @@
+{
+    "bmirecords": [
+      {
+        "name": "Peter",
+        "age": "30",
+        "height": "60",
+        "weight": "170",
+        "bmi": "",
+        "id": 1
+      },
+      {
+        "name": "Maria",
+        "age": "27",
+        "height": "50",
+        "weight": "150",
+        "bmi": "",
+        "id": 2
+      }
+    ]
+  }
