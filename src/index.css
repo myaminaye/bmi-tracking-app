@@ -25,12 +25,17 @@ code {
 
 table {
   border-collapse: collapse;
-  width: 60%;
+  width: 80%;
   margin:auto;
 }
 
 tr {
   border: 1px solid #ddd;
+}
+
+th, td{
+  text-align: left;
+  width: 15%;
 }
 
 /* style of new record form */
