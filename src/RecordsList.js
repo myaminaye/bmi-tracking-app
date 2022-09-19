@@ -1,10 +1,28 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link , useParams, useNavigate } from "react-router-dom";
+import useFetch from "./useFetch";
+
 
 const BmiRecords = ({ bmirecords }) => {
-  // const calculateBMI = (weight, height) => {
-  //   let bmi = (weight / ((height * height) / 10000)).toFixed(2);
-  //   setBmi(bmi);
-  // };
+  const [bmi,setBmi] = useState('');
+
+  const calculateBMI = (weight, height) => {
+    let bmivalue = (weight / ((height * height) / 10000)).toFixed(2);
+    setBmi(bmivalue);
+  };
+
+  const { id } = useParams();
+  const { data: bmirecord, error, isPending } = useFetch('http://localhost:8000/bmirecords/' + id);
+
+  const history = useNavigate();
+
+  const handleDelete = () => {
+    fetch('http://localhost:8000/bmirecords/' + bmirecord.id, {
+      method: 'DELETE'
+    }).then(() => {
+      history('/');
+    }) 
+  }
 
   return (
     <div className="bmi-records">
@@ -26,10 +44,10 @@ const BmiRecords = ({ bmirecords }) => {
               <td>{bmirecord.age}</td>
               <td>{bmirecord.height}cm</td>
               <td>{bmirecord.weight}kg</td>
-              <td>{bmirecord.bmi}</td>
+              {/* <td>{calculateBMI(bmirecord.weight,bmirecord.height)}</td> */}
               <td>
                 <Link to={`/bmirecords/${bmirecord.id}`}>Edit</Link>/
-                <Link to="/">Delete</Link>
+                <Link to="/" onClick={handleDelete}>Delete</Link>
               </td>
             </tr>
           </table>

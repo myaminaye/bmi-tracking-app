@@ -1,20 +1,48 @@
 {
-    "bmirecords": [
-      {
-        "name": "Peter",
-        "age": "30",
-        "height": "60",
-        "weight": "170",
-        "bmi": "",
-        "id": 1
-      },
-      {
-        "name": "Maria",
-        "age": "27",
-        "height": "50",
-        "weight": "150",
-        "bmi": "",
-        "id": 2
-      }
-    ]
-  }
+  "bmirecords": [
+    {
+      "name": "Peter",
+      "age": "30",
+      "height": "60",
+      "weight": "170",
+      "bmi": "",
+      "id": 1
+    },
+    {
+      "name": "Maria",
+      "age": "27",
+      "height": "50",
+      "weight": "150",
+      "bmi": "",
+      "id": 2
+    },
+    {
+      "name": "mma",
+      "age": "22",
+      "height": "160",
+      "weight": "60",
+      "id": 3
+    },
+    {
+      "name": "mma",
+      "age": "22",
+      "height": "160",
+      "weight": "60",
+      "id": 4
+    },
+    {
+      "name": "lre",
+      "age": "24",
+      "height": "343",
+      "weight": "80",
+      "id": 5
+    },
+    {
+      "name": "ft",
+      "age": "6",
+      "height": "34",
+      "weight": "56",
+      "id": 6
+    }
+  ]
+}

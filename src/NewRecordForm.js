@@ -8,7 +8,7 @@ const NewRecordForm = () => {
   const [bmi, setBmi] = useState("");
   const [isPending, setIsPending] = useState(false);
 
-  const history = useNavigate();
+//   const history = useNavigate();
 
   const calculateBMI = (weight, height) => {
     let bmi = (weight / ((height * height) / 10000)).toFixed(2);
@@ -30,7 +30,7 @@ const NewRecordForm = () => {
     }).then(() => {
       console.log("new record added");
       setIsPending(false);
-      history("/");
+    //   history("/");
     });
   };
 
@@ -66,11 +66,14 @@ const NewRecordForm = () => {
           onChange={(e) => setWeight(e.target.value)}
         />
 
-        <p>{bmi}</p>
+        {/* <p>{bmi}</p> */}
 
-        <button type="submit">Submit</button>
+        {!isPending && <button>Add Record</button>}
+        {isPending && <button>Adding Record...</button>}
 
-        <button onClick={calculateBMI}>Calculate</button>
+        {/* <button type="submit">Submit</button>
+
+        <button onClick={calculateBMI}>Calculate</button> */}
       </form>
     </div>
   );
